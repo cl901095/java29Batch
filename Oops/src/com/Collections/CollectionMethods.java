@@ -64,6 +64,8 @@ public class CollectionMethods {
 		System.out.println(s1.size());
 
 		// 11. Object[] toArray();
+		
+		
 
 		// 12. . Iterator iterator();
 		// it has three methods
@@ -116,6 +118,10 @@ public class CollectionMethods {
 		for (int i = 0; i < 10; i++) {
 			l.add(i);
 		}
+		
+		
+		
+		
 
 		ListIterator ltr = l.listIterator();
 		
@@ -128,7 +134,7 @@ public class CollectionMethods {
 			Integer i = (Integer) ltr.next();
 			System.out.print(i);
 			
-//			8. public void set(Object new), it will effect of next interations
+//			8. public void set(Object new), it will effect of next interations set is used to update the data
 			
 			if(i==7) {
 				ltr.set(70);
