@@ -1,5 +1,6 @@
 package com.Collections.Map;
 
+import java.util.Comparator;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -21,15 +22,24 @@ public class SortedMap1 {
 
 		// 3.SortedMap headMap(Object key);
 		System.out.println(sh.headMap(3));
-		
+
 		// 4.SortedMap tailMap(Object key);
 		System.out.println(sh.tailMap(1));
-		
+
 		// 5.SortedMap subMap(Object key1,Object key2);
 		System.out.println(sh.subMap(1, 3));
-		
+
 		// 6`.Comparator comparator();
-		
-		
+		Comparator c = sh.comparator();
+		System.out.println(c);
+
+	}
+}
+
+class MyComparator implements Comparator {
+	public int compare(Object obj1, Object obj2) {
+		String s1 = obj1.toString();
+		String s2 = obj2.toString();
+		return s2.compareTo(s1);
 	}
 }
